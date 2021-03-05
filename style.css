@@ -6,15 +6,18 @@ body {
     align-items: center;
     margin: 0;
     background-color: black;
+    font-family: 'DotGothic16', sans-serif;
 }
 
-.game-board {
+#game-header {
+    color: white;
+}
+
+.game-container {
     background-color: whitesmoke;
     width: 100vw;
     height: 100vmin;
     display: grid;
-    grid-template-rows: repeat(21, 1fr);
-    grid-template-columns: repeat(21, 1fr);
 }
 
 .snek {
@@ -27,26 +30,26 @@ body {
     border: .25vmin solid black;
 }
 
-.control-btns {
+#on-screen-controller {
     display: none;
 }
 
 
 
 @media screen and (max-width: 750px) {
-    .control-btns {
+    #on-screen-controller {
         display: block;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .control-btns {
+    #on-screen-controller {
         display: block;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .control-btns {
+    #on-screen-controller {
         display: block;
     }
 }
