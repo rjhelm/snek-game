@@ -1,0 +1,55 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+#game-header {
+    color: white;
+}
+
+.game-container {
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100vmin;
+    display: grid;
+}
+
+.snek {
+    background-color: rgb(1, 100, 1);
+    border: .25vmin solid black;
+}
+
+.snek {
+    background-color: rgb(173, 39, 95);
+    border: .25vmin solid black;
+}
+
+#on-screen-controller {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    #on-screen-controller {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #on-screen-controller {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #on-screen-controller {
+        display: block;
+    }
+}
