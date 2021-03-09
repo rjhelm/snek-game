@@ -17,7 +17,7 @@ let gamePixels = document.getElementsByClassName("game-pixels");
 let startFoodPosition = 0;
 let createFood = () => {
     // Remove Food 
-    gamePixels[startFoodPosition].classList.remove("food")
+    gamePixels[startFoodPosition].classList.remove("food");
     // New food
     startFoodPosition = Math.random();
     startFoodPosition = Math.floor(startFoodPosition * 1600);
