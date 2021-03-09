@@ -329,3 +329,15 @@ function drawSnake() {
         }, 1000);
     }
 }
+
+//Random Obstacle Functions
+function randObstaclePosition() {
+  let randomObstacle = generateCoordinates();
+  randomObstacleX = randomObstacle.xCoordinate;
+  randomObstacleY = randomObstacle.yCoordinate;
+}
+
+function drawRandomObstacle() {
+  context.drawImage(randomObstacle, randomObstacleX, randomObstacleY, scale, scale);
+}
+
