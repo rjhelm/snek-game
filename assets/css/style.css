@@ -21,7 +21,7 @@ h2 {
 }
 
 canvas {
-    background-image: url(./images/grass.png);
+    background-image: url(https://github.com/rjhelm/snek-game/blob/main/assets/images/grass.png?raw=true);
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 20px;
