@@ -1,25 +1,37 @@
-// Initialize Score Variables
-let foodEaten = 0;
-let snakeTraveled = 0;
+// Global Variables
+var canvas = document.getElementById("snakeCanvas");
+var context = canvas.getContext("2d");
+var score = document.getElementById("score");
+var startBtn = document.getElementById("startBtn");
+var pauseBtn = document.getElementById("pauseBtn");
+var resumeBtn = document.getElementById("resumeBtn");
+var modalBtn = document.getElementById("modalBtn");
+var food = document.getElementById("food");
+var randomObstacle = document.getElementById("randomObstacle");
+var snakeHeadX,
+    snakeHeadY,
+    foodX,
+    foodY,
+    randomObstacleX,
+    randomObstacleY,
+    tail,
+    totalTail,
+    directionVar,
+    direction,
+    previousDir;
+var speed = 1,
+xSpeed,
+ySpeed;
+const scale = 20;
+var rows = canvas.height / scale;
+var columns = canvas.width / scale;
+var min = scale / 10;
+var max = rows - min; 
+var gameInterval, 
+  randObstacleInterval, 
+  intervalDuration = 150, 
+  minDuration = 75; 
+var playing, gameStarted;
+var boundaryCollision;
+var tail0;
 
-// Gameboard Pixels
-let gameContainer = document.getElementById("#game-container");
-let createGameBoard = () => {
-    // populate our game board using game-container
-    for (let i = 0; i <= 1600; i++) {
-        gameContainer.innerHTML = `${gameContainer.innerHTML} <div class="game-pixel" id=""pixel${i}"></div>`;
-    }
-};
-// Variable to hold the game pixels created above
-let gamePixels = document.getElementsByClassName("game-pixels"); 
-
-// Code for food
-let startFoodPosition = 0;
-let createFood = () => {
-    // Remove Food 
-    gamePixels[startFoodPosition].classList.remove("food");
-    // New food
-    startFoodPosition = Math.random();
-    startFoodPosition = Math.floor(startFoodPosition * 1600);
-    gamePixels[startFoodPosition].classList.add("food");
-};
