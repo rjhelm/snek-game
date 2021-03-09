@@ -341,3 +341,16 @@ function drawRandomObstacle() {
   context.drawImage(randomObstacle, randomObstacleX, randomObstacleY, scale, scale);
 }
 
+//Food//
+//generate random food position within canvas boundaries
+function foodPosition() {
+  let food = generateCoordinates();
+  foodX = food.xCoordinate;
+  foodY = food.yCoordinate;
+}
+
+//draw image of food
+function drawFood() {
+  context.drawImage(food, foodX, foodY, scale, scale);
+}
+
