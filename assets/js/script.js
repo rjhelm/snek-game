@@ -329,3 +329,73 @@ function drawSnake() {
         }, 1000);
     }
 }
+
+//Random Obstacle Functions
+function randObstaclePosition() {
+  let randomObstacle = generateCoordinates();
+  randomObstacleX = randomObstacle.xCoordinate;
+  randomObstacleY = randomObstacle.yCoordinate;
+}
+
+function drawRandomObstacle() {
+  context.drawImage(randomObstacle, randomObstacleX, randomObstacleY, scale, scale);
+}
+
+//Food//
+//generate random food position within canvas boundaries
+function foodPosition() {
+  let food = generateCoordinates();
+  foodX = food.xCoordinate;
+  foodY = food.yCoordinate;
+}
+
+//draw image of food
+function drawFood() {
+  context.drawImage(food, foodX, foodY, scale, scale);
+}
+
+//Main Game Functions
+function checkSamePosition() {
+  if (foodX == randomObstacleX && foodY == randomObstacleY) {
+    randObstaclePosition();
+  }
+  for (let i = 0; i < tail.length; i++) {
+    if (randomObstacleX === tail[i].tailX && randomObstacleY === tail[i].tailY) {
+      randObstaclePosition();
+      break;
+    }
+  }
+  for (let i = 0; i < tail.length; i++) {
+    if (foodX === tail[i].tailX && foodY === tail[i].tailY) {
+      foodPosition();
+      break;
+    }
+  }
+}
+
+function main() {
+  //update state at specified interval
+  randObstacleInterval = window.setInterval(randObstaclePosition, 10000);
+  gameInterval = window.setInterval(() => {
+    context.clearRect(0, 0, 500, 500);
+    checkSamePosition();
+    drawRandomObstacle();
+    drawFood();
+    moveSnakeForward();
+    drawSnake();
+
+    //check if snake eats the food - increase size of its tail, update score and find new food position
+    if (snakeHeadX === foodX && snakeHeadY === foodY) {
+      totalTail++;
+      //increase the speed of game after every 20 points
+      if (totalTail % 20 == 0 && intervalDuration > minDuration) {
+        clearInterval(gameInterval);
+        window.clearInterval(randObstacleInterval);
+        intervalDuration = intervalDuration - 10;
+        main();
+      }
+      foodPosition();
+    }
+    score.innerText = totalTail;
+  }, intervalDuration);
+}
