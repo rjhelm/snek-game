@@ -354,3 +354,22 @@ function drawFood() {
   context.drawImage(food, foodX, foodY, scale, scale);
 }
 
+//Main Game Functions
+function checkSamePosition() {
+  if (foodX == randomObstacleX && foodY == randomObstacleY) {
+    randObstaclePosition();
+  }
+  for (let i = 0; i < tail.length; i++) {
+    if (randomObstacleX === tail[i].tailX && randomObstacleY === tail[i].tailY) {
+      randObstaclePosition();
+      break;
+    }
+  }
+  for (let i = 0; i < tail.length; i++) {
+    if (foodX === tail[i].tailX && foodY === tail[i].tailY) {
+      foodPosition();
+      break;
+    }
+  }
+}
+
