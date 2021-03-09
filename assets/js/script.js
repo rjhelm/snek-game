@@ -373,3 +373,29 @@ function checkSamePosition() {
   }
 }
 
+function main() {
+  //update state at specified interval
+  randObstacleInterval = window.setInterval(randObstaclePosition, 10000);
+  gameInterval = window.setInterval(() => {
+    context.clearRect(0, 0, 500, 500);
+    checkSamePosition();
+    drawRandomObstacle();
+    drawFood();
+    moveSnakeForward();
+    drawSnake();
+
+    //check if snake eats the food - increase size of its tail, update score and find new food position
+    if (snakeHeadX === foodX && snakeHeadY === foodY) {
+      totalTail++;
+      //increase the speed of game after every 20 points
+      if (totalTail % 20 == 0 && intervalDuration > minDuration) {
+        clearInterval(gameInterval);
+        window.clearInterval(randObstacleInterval);
+        intervalDuration = intervalDuration - 10;
+        main();
+      }
+      foodPosition();
+    }
+    score.innerText = totalTail;
+  }, intervalDuration);
+}
