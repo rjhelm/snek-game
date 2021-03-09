@@ -39,7 +39,7 @@ startBtn.addEventListener("click", startGame);
 
 // Reset values of variables to starting values]
 function reset() {
-    learInterval(gameInterval);
+    clearInterval(gameInterval);
     clearInterval(randObstacleInterval);
     (intervalDuration = 150), (minDuration = 75);
     tail = [];
