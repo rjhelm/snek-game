@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Snek Game</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Ravi+Prakash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -38,7 +38,6 @@
 
 <body>
     <div class="gamePage d-flex flex-column justify-content-center align-items-center">
-        <h1>Snake</h1>
         <div id="startBtn" class="btn mt-2 mb-4">Start Game?</div>
         <div class="rel">
             <div class="d-flex buttons">
@@ -70,6 +69,24 @@
             </div>
         </div>
     </div>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <h4 class="foot-header white-text">GitHub Creators of © Snek</h4>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h5 class="flex-container white-text">
+                    <ul><a href="https://github.com/rjhelm">rjhelm</a></ul>
+                    <ul><a href="https://github.com/matty-bennett">matty-bennett</a></ul>
+                    <ul><a href="https://github.com/savbennett8">savbennett8</a></ul>
+                    <ul><a href="https://github.com/linegrind675">linegrind675</a></ul>
+                </h5>
+            </div>
+        </div>
+    </footer>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -82,26 +99,5 @@
         </script>
     <script src="./assets/js/script.js"></script>
 </body>
-
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">/h5>
-                    <ul>
-                    </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            Snek 🐍
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
-    </div>
-</footer>
 
 </html>
