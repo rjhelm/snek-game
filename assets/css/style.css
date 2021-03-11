@@ -127,6 +127,7 @@ canvas {
     display: flex;
     justify-content: space-evenly;
     margin: 0;
+    width: 100%;
 }
 
 a {
@@ -135,4 +136,5 @@ a {
 
 a:hover {
     text-shadow: 1px 1px 1px black;
+    color: inherit;
 }

@@ -400,6 +400,7 @@ function main() {
   }, intervalDuration);
 }
 
+//api to display snake gif after game ends
 let modalGif = function () {
   fetch('https://api.giphy.com/v1/gifs/search?q=snake&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1')
     .then(function (response) {
