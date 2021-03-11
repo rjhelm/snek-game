@@ -1,64 +1,23 @@
+
+
+</html>
+
 <!DOCTYPE html>
-<<<<<<< HEAD
-
-<html>
-<<<<<<< HEAD
-=======
-    <head lang="en">
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Snek 🐍 || Classic Snake-Style Game</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Fascinate&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./style.css">
-    </head>
->>>>>>> 202ba8ccf9df7294ef2f2b6ffb170d586de83a5b
-
-<head lang="en">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snek 🐍 || Classic Snake-Style Game</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link rel="stylesheet" type="text/css" href="./style.css">
-</head>
-
-<body>
-    <h1 id="game-header">Snek 🐍</h1>
-    <div class="score-container"></div>
-    <div class="game-container"><canvas id="canvas" width="800" height="800"></canvas></div>
-
-
-    <div id="on-screen-controller">
-        <button id="left-btn">◀️</button>
-        <div>
-            <button id="up-btn">🔼</button>
-            <button id="down-btn">🔽</button>
-        </div>
-        <div>
-            <button id="right-btn">▶️</button>
-        </div>
-    </div>
-
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
-
-=======
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Snek Game</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Ravi+Prakash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -66,7 +25,6 @@
     <nav>
         <div class="nav-wrapper">
             <a href="#!" class="nav-header">Snek</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">High Scores</a></li>
                 <li><a href="#">About The Game</a></li>
@@ -76,17 +34,16 @@
         </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
+    <!-- <ul class="sidenav" id="mobile-demo">
         <li><a href="#">High Scores</a></li>
         <li><a href="#">About The Game</a></li>
         <li><a href="#">Placeholder</a></li>
         <li><a href="#">Mobile Placeholder</a></li>
-    </ul>
+    </ul> -->
 </header>
 
 <body>
     <div class="gamePage d-flex flex-column justify-content-center align-items-center">
-        <h1>Snake</h1>
         <div id="startBtn" class="btn mt-2 mb-4">Start Game?</div>
         <div class="rel">
             <div class="d-flex buttons">
@@ -108,7 +65,9 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <img id="snake" src="./assets/images/snake.png" alt="snake">
+                        <div id="gif-container">
+
+                        </div>>
                         <p>Game Over! Your Score is: <span id="scoreModal"></span></p>
                     </div>
                     <div class="modal-footer">
@@ -118,6 +77,24 @@
             </div>
         </div>
     </div>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <h4 class="foot-header white-text">GitHub Creators of © Snek</h4>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h5 class="flex-container white-text">
+                    <ul><a href="https://github.com/rjhelm">rjhelm</a></ul>
+                    <ul><a href="https://github.com/matty-bennett">matty-bennett</a></ul>
+                    <ul><a href="https://github.com/savbennett8">savbennett8</a></ul>
+                    <ul><a href="https://github.com/linegrind675">linegrind675</a></ul>
+                </h5>
+            </div>
+        </div>
+    </footer>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -131,26 +108,4 @@
     <script src="./assets/js/script.js"></script>
 </body>
 
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">/h5>
-                    <ul>
-                    </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            Snek 🐍
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
-    </div>
-</footer>
-
->>>>>>> caf3f7f8001244a5f80edf369b5234e9489bb632
 </html>
