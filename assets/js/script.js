@@ -51,8 +51,6 @@ function reset() {
     ySpeed = 0;
     snakeHeadX = 0;
     snakeHeadY = 0;
-    pauseBtn.style.backgroundColor = "#fff";
-    resumeBtn.style.backgroundColor = "#fff";
     (playing = false), (gameStarted = false);
     boundaryCollision = false;
 }

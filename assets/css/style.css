@@ -15,7 +15,6 @@ h2 {
     color: brown;
     text-transform: uppercase;
     font-size: 1.5rem;
-    position: absolute;
     top: -60px;
     left: -230px;
 }
@@ -60,7 +59,6 @@ canvas {
 
 .buttons {
     margin-bottom: 10px;
-    position: absolute;
     top: -70px;
     left: 140px;
 }
@@ -99,4 +97,12 @@ canvas {
 #pauseBtn:hover,
 #resumeBtn:hover {
     background-color: #ccc;
+}
+
+#score-card {
+    border: solid 17px black;
+}
+
+#player-title {
+    border-right: border: solid 17px black;
 }
