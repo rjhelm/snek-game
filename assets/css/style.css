@@ -33,6 +33,10 @@ canvas {
     padding: 0 20px;
 }
 
+.gamePage {
+    margin-top: 20px;
+}
+
 .rel {
     position: relative;
 }
@@ -48,6 +52,7 @@ canvas {
 .btn {
     display: block;
     width: 15%;
+    margin-top: 20px;
     font-size: 1rem;
     background-color: brown;
     color: #fff;
@@ -125,6 +130,7 @@ canvas {
     display: flex;
     justify-content: space-evenly;
     margin: 0;
+    width: 100%;
 }
 
 a {
@@ -154,20 +160,44 @@ a:hover {
     }
 
     .nav-wrapper { 
-        width: auto;
-        position: relative;
+        display: block;
     }
+
+    .gamePage {
+        margin-top: 20px;
+    }
+
+    
+
 
 }
 
 @media screen and (max-width: 768px) {
-
+   
+    #startBtn {
+        height: 50px;
+   }
 }
 
 @media screen and (max-width: 575px) {
 
    canvas {
        width: 100%;
+       width: 400px;
+       justify-content: center;
    }
+
+   #resumeBtn {
+        margin-right: 40px;
+   }
+
+   #resumeBtn, #pauseBtn {
+        display: flex;
+   }
+   
+   .mt-3 {
+       margin-left: 40px;
+   }
+
 
 }
