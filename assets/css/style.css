@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Ravi Prakash', cursive;
 }
 
@@ -9,15 +9,21 @@ body {
     font-size: 3.5rem;
     color: brown;
     font-weight: bold;
+    display: flex;
+    font-size: 34px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    margin-bottom: 125px;
+    margin-left: auto;
 }
 
 h2 {
-    color: brown;
+    color: whitesmoke;
     text-transform: uppercase;
     font-size: 1.5rem;
-    position: absolute;
-    top: -60px;
-    left: -230px;
+    
 }
 
 canvas {
@@ -28,17 +34,17 @@ canvas {
     border: solid 17px black;
 }
 
-.nav-header {
-    font-size: 34px;
-    padding: 0 20px;
+#main-section {
+    margin-top: 100px;
 }
 
-.gamePage {
-    margin-top: 20px;
+.row {
+    justify-content: center;
 }
 
-.rel {
-    position: relative;
+.row .col {
+    padding-right: 50px;
+    padding-left: 100px;
 }
 
 .modal-dialog {
@@ -47,16 +53,6 @@ canvas {
 
 .modal-body {
     text-align: center;
-}
-
-.btn {
-    display: block;
-    width: 15%;
-    margin-top: 20px;
-    font-size: 1rem;
-    background-color: brown;
-    color: #fff;
-    border: 1px solid brown;
 }
 
 .btn:hover {
@@ -69,10 +65,7 @@ canvas {
 }
 
 .buttons {
-    margin-bottom: 10px;
-    position: absolute;
-    top: -70px;
-    left: 140px;
+    margin-bottom: 5px;
 }
 
 .result img {
@@ -97,20 +90,6 @@ canvas {
     font-weight: bolder;
 }
 
-#pauseBtn,
-#resumeBtn {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    margin: 5px;
-}
-
-#pauseBtn:hover,
-#resumeBtn:hover {
-    background-color: #ccc;
-}
-
 .page-footer {
     padding-top: 15px;
     max-height: 175px;
@@ -126,12 +105,12 @@ canvas {
     text-align: center;
 }
 
-.flex-container {
+/* .flex-container {
     display: flex;
     justify-content: space-evenly;
     margin: 0;
     width: 100%;
-}
+} */
 
 a {
     color: inherit;
@@ -139,6 +118,7 @@ a {
 
 a:hover {
     text-shadow: 1px 1px 1px black;
+    color: inherit;
 }
 
 @media screen and (max-width: 980px) {
