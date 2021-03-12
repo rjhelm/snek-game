@@ -1,22 +1,30 @@
 body {
-    margin: 0;
-    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Ravi Prakash', cursive;
 }
 
-h1 {
+.nav-header {
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: brown;
     font-weight: bold;
+    display: flex;
+    font-size: 34px;
+    padding: 0 20px;
+    top: 0;
+    align-items: center;
+    margin-bottom: 125px;
+    margin-left: auto;
+    width: 100%;
 }
 
 
 h2 {
-    color: brown;
+    color: whitesmoke;
     text-transform: uppercase;
     font-size: 1.5rem;
-    top: -60px;
-    left: -230px;
+    
 }
 
 canvas {
@@ -24,11 +32,20 @@ canvas {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 20px;
-    border: solid 17px black;
+    border: solid 17px white;
 }
 
-.rel {
-    position: relative;
+#main-section {
+    margin-top: 100px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.row .col {
+    padding-right: 50px;
+    padding-left: 100px;
 }
 
 .modal-dialog {
@@ -37,15 +54,6 @@ canvas {
 
 .modal-body {
     text-align: center;
-}
-
-.btn {
-    display: block;
-    width: 15%;
-    font-size: 1rem;
-    background-color: brown;
-    color: #fff;
-    border: 1px solid brown;
 }
 
 .btn:hover {
@@ -57,10 +65,12 @@ canvas {
     width: 20%;
 }
 
+#startBtn {
+    margin: 20px;
+}
+
 .buttons {
-    margin-bottom: 10px;
-    top: -70px;
-    left: 140px;
+    margin-bottom: 5px;
 }
 
 .result img {
@@ -74,6 +84,11 @@ canvas {
     display: none;
 }
 
+.result {
+    background-color: white;
+    padding-left: 10px;
+}
+
 #snake {
     height: 100px;
     width: 100px;
@@ -85,24 +100,91 @@ canvas {
     font-weight: bolder;
 }
 
-#pauseBtn,
-#resumeBtn {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    margin: 5px;
+.page-footer {
+    padding-top: 15px;
+    
 }
 
-#pauseBtn:hover,
-#resumeBtn:hover {
-    background-color: #ccc;
+.grey-text {
+    padding: 10px 20px;
+    font-size: 22px;
 }
 
-#score-card {
-    border: solid 17px black;
+.foot-header {
+    width: 100%;
+    text-align: center;
 }
 
-#player-title {
-    border-right: border: solid 17px black;
+/* .flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    width: 100%;
+} */
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-shadow: 1px 1px 1px black;
+    color: inherit;
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 20px 25px;
+        justify-content: center;
+        position: relative;
+    }
+    
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+        position: relative;
+    }
+
+    .nav-wrapper { 
+        display: block;
+    }
+
+    .gamePage {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+   
+    #startBtn {
+        height: 50px;
+   }
+
+}
+
+@media screen and (max-width: 575px) {
+
+   canvas {
+       width: 100%;
+       width: 400px;
+       justify-content: center;
+   }
+
+   #resumeBtn {
+        margin-right: 40px;
+   }
+
+   #resumeBtn, #pauseBtn {
+        display: flex;
+   }
+   
+   .mt-3 {
+       margin-left: 40px;
+   }
+
 }
