@@ -1,3 +1,5 @@
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,76 +19,107 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<header class="site-header">
-    <nav class="nav-wrapper">
-        <a href="#!" class="nav-header">Snek</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">High Scores</a></li>
-            <li><a href="#">About The Game</a></li>
-            <li><a href="#">Placeholder</a></li>
-            <li><a href="#">Mobile Placeholder</a></li>
-        </ul>
+<body background="./assets/images/site-background.jpg">
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="nav-header">Snek</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">High Scores</a></li>
+                <li><a href="#">About The Game</a></li>
+                <li><a href="#">Placeholder</a></li>
+                <li><a href="#">Mobile Placeholder</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">High Scores</a></li>
-        <li><a href="#">About The Game</a></li>
-        <li><a href="#">Placeholder</a></li>
-        <li><a href="#">Mobile Placeholder</a></li>
-    </ul>
-</header>
+    <div class="row" id="main-section">
 
-<body>
-    <div class="gamePage d-flex flex-column justify-content-center align-items-center">
-        <button id="startBtn" class="btn mt-2 mb-4">Start Game?</button>
-        <div class="rel">
-            <div class="d-flex buttons">
-                <div id="pauseBtn">
-                    <img src="./assets/images/pause.png"></img>
-                </div>
-                <div id="resumeBtn">
-                    <img src="./assets/images/play.png"></img>
+        <div class="s12 center">
+            <div class="row">
+                <h1 class="snek-title">Snek</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 center">
+                <a id="startBtn" class="btn floating waves-effect waves-light btn-large">Start</a>
+                <h2><span class="result"><img src="./assets/images/food.png" alt="food"></span>
+                    <span id="score">0</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 centered">
+                <canvas id="snakeCanvas" width="500" height="500"></canvas>
+                <img class="responsive-img" id="randomObstacle" src="./assets/images/random-obstacle.png"
+                    alt="randomObstacle">
+                <img id="food" src="./assets/images/food.png" alt="food">
+            </div>
+        </div>
+    </div>
+
+    <aside class="col s12 center">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h1 id="hs-title">High Scores</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="player-title" class="col s12 center">
+                <h2>Player</h2>
+            </div>
+            <div class="col s12 center">
+                <h2>Score</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m6">
+                <div id="score-card" class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+
+                    </div>
                 </div>
             </div>
-            <h2 class="mt-3"><span class="result"><img src="./assets/images/food.png" alt="food"></span><span
-                    id="score">0</span></h2>
         </div>
-        <canvas id="snakeCanvas" width="500" height="500"></canvas>
-        <img id="randomObstacle" src="./assets/images/random-obstacle.png" alt="randomObstacle">
-        <img id="food" src="./assets/images/food.png" alt="food">
-        <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div id="gif-container"></div>
-                        <p>Game Over! Your Score is: <span id="scoreModal"></span></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" id="modalBtn" class="btn modal-btn" data-dismiss="modal">Ok</button>
-                    </div>
+    </aside>
+
+
+    <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="gif-container"></div>
+                    <p>Game Over! Your Score is: <span id="scoreModal"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="modalBtn" class="btn modal-btn" data-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>
     </div>
 
+
     <footer class="page-footer">
         <div class="footer-copyright">
-            <h4 class="foot-header white-text">GitHub Creators of © Snek</h4>
+            <h4 class="foot-header white-text">© Snek</h4>
         </div>
         <div class="container">
             <div class="row">
                 <h5 class="flex-container white-text">
-                    <ul><a href="https://github.com/rjhelm">rjhelm</a></ul>
-                    <ul><a href="https://github.com/matty-bennett">matty-bennett</a></ul>
-                    <ul><a href="https://github.com/savbennett8">savbennett8</a></ul>
-                    <ul><a href="https://github.com/linegrind675">linegrind675</a></ul>
+                    <ul><a href="https://github.com/rjhelm"><img src="assets/images/github.png"> rjhelm</a></ul>
+                    <ul><a href="https://github.com/matty-bennett"><img src="assets/images/github.png"> matty-bennett</a></ul>
+                    <ul><a href="https://github.com/savbennett8"><img src="assets/images/github.png"> savbennett8</a></ul>
+                    <ul><a href="https://github.com/linegrind675"><img src="assets/images/github.png"> linegrind675</a></ul>
                 </h5>
             </div>
         </div>
     </footer>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
