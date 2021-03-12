@@ -398,6 +398,8 @@ function main() {
     }
     score.innerText = totalTail;
   }, intervalDuration);
+
+
 }
 
 //api to display snake gif after game ends

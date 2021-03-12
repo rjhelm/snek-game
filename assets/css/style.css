@@ -20,7 +20,7 @@ body {
 }
 
 h2 {
-    color: whitesmoke;
+    color: black;
     text-transform: uppercase;
     font-size: 1.5rem;
     
@@ -143,10 +143,6 @@ a:hover {
         display: block;
     }
 
-    .gamePage {
-        margin-top: 20px;
-    }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -164,17 +160,5 @@ a:hover {
        width: 400px;
        justify-content: center;
    }
-
-   #resumeBtn {
-        margin-right: 40px;
-   }
-
-   #resumeBtn, #pauseBtn {
-        display: flex;
-   }
    
-   .mt-3 {
-       margin-left: 40px;
-   }
-
 }
