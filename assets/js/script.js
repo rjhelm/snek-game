@@ -44,6 +44,14 @@ var userHigh = [];
 // Listen for click on Start Button
 startBtn.addEventListener("click", startGame);
 
+// prevent scrolling on arrow keys pressed
+window.addEventListener("keydown", function(e) {
+  if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+      e.preventDefault();
+  }
+}, false);
+
+
 // Reset values of variables to starting values]
 function reset() {
   clearInterval(gameInterval);
@@ -424,3 +432,22 @@ let modalGif = function () {
 };
 
 modalGif();
+
+/* let playerName = document.querySelector("#name-input");
+let playerInfo = {
+  name: playerName.value,
+  endScore: totalTail
+};
+
+let getHighScore = () => {
+  let highScore = localStorage.getItem("highscore");
+  if (!highscore) {
+    highScore = 0;
+  }
+  if (playerInfo.endScore > highScore) {
+    localStorage.setItem("highscore", playerInfo.endScore);
+    localStorage.setItem("name", playerInfo.name);
+  }
+
+} 
+*/
