@@ -9,6 +9,7 @@ var modalBtn = document.getElementById("modalBtn");
 var food = document.getElementById("food");
 var randomObstacle = document.getElementById("randomObstacle");
 var highScores = document.getElementById("hs-title");
+let playerName = document.querySelector("#name-input");
 
 // Global Variables for Game Functions
 var snakeHeadX,
@@ -321,7 +322,7 @@ function drawSnake() {
       modalBtn.addEventListener("click", () => {
         context.clearRect(0, 0, 500, 500);
         score.innerText = 0;
-      });
+      }); 
     }, 1000);
   }
 }
@@ -433,14 +434,20 @@ let modalGif = function () {
 
 modalGif();
 
-/* let playerName = document.querySelector("#name-input");
-let playerInfo = {
+// save modal score and name input to local storage
+modalBtn.addEventListener("click", () => {
+  let playerInfo = {
   name: playerName.value,
   endScore: totalTail
-};
+  };
+  userHigh.push(playerInfo);
+  localStorage.setItem("userHigh", JSON.stringify(userHigh));
+  console.log(userHigh);
+});
+/*
+let highScore = localStorage.getItem("highscore");
 
 let getHighScore = () => {
-  let highScore = localStorage.getItem("highscore");
   if (!highscore) {
     highScore = 0;
   }
