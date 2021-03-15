@@ -9,6 +9,7 @@ var modalBtn = document.getElementById("modalBtn");
 var food = document.getElementById("food");
 var randomObstacle = document.getElementById("randomObstacle");
 var highScores = document.getElementById("hs-title");
+let playerName = document.querySelector("#name-input");
 
 // Global Variables for Game Functions
 var snakeHeadX,
@@ -468,7 +469,6 @@ modalBtn.addEventListener("click", function () {
       scoreContentEl.removeChild(scoreContentEl.firstChild)
     }
   }
-
   displayContent();
 })
 
