@@ -115,13 +115,6 @@ canvas {
     text-align: center;
 }
 
-/* .flex-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    width: 100%;
-} */
-
 a {
     color: inherit;
 }
@@ -129,6 +122,15 @@ a {
 a:hover {
     text-shadow: 1px 1px 1px black;
     color: inherit;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-elements {
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 980px) {
@@ -157,6 +159,12 @@ a:hover {
         margin-top: 20px;
     }
 
+    /* .flex-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 60px;
+    } */
+
 }
 
 @media screen and (max-width: 768px) {
@@ -168,6 +176,9 @@ a:hover {
 }
 
 @media screen and (max-width: 575px) {
+    html {
+        width: 575px;
+    }
 
    canvas {
        width: 100%;
@@ -185,6 +196,11 @@ a:hover {
    
    .mt-3 {
        margin-left: 40px;
+   }
+
+   footer,
+   nav {
+       width: 200%;
    }
 
 }

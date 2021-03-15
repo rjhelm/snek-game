@@ -43,12 +43,15 @@ var tail0;
 var userHigh = [];
 
 // Listen for click on Start Button
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", function () {
+  startGame();
+  //playMusic();
+});
 
 // prevent scrolling on arrow keys pressed
-window.addEventListener("keydown", function(e) {
-  if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-      e.preventDefault();
+window.addEventListener("keydown", function (e) {
+  if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+    e.preventDefault();
   }
 }, false);
 
@@ -322,7 +325,7 @@ function drawSnake() {
       modalBtn.addEventListener("click", () => {
         context.clearRect(0, 0, 500, 500);
         score.innerText = 0;
-      }); 
+      });
     }, 1000);
   }
 }
@@ -412,7 +415,7 @@ function main() {
   }, intervalDuration);
 }
 
-// Serer-Side Api fetch so the user see's a gif in the modal at the end of the game
+// Server-Side Api fetch so the user see's a gif in the modal at the end of the game
 let modalGif = function () {
   fetch(
     "https://api.giphy.com/v1/gifs/search?q=snake&api_key=HvaacROi9w5oQCDYHSIk42eiDSIXH3FN&limit=1"
@@ -421,7 +424,6 @@ let modalGif = function () {
       return response.json();
     })
     .then(function (response) {
-      console.log(response.data[0]);
       let gifContainer = document.getElementById("gif-container");
       gifContainer.innerHTML = "";
 
@@ -434,27 +436,68 @@ let modalGif = function () {
 
 modalGif();
 
-// save modal score and name input to local storage
-modalBtn.addEventListener("click", () => {
-  let playerInfo = {
-  name: playerName.value,
-  endScore: totalTail
-  };
-  userHigh.push(playerInfo);
-  localStorage.setItem("userHigh", JSON.stringify(userHigh));
-  console.log(userHigh);
-});
-/*
-let highScore = localStorage.getItem("highscore");
+// //web audio api
+// let playMusic = function () {
+//   const AudioContext = window.AudioContext || window.webkitAudioContext;
+//   const audioContext = new AudioContext();
 
-let getHighScore = () => {
-  if (!highscore) {
-    highScore = 0;
+//   // get the audio element
+//   const audioElement = document.getElementById('audio');
+
+//   // pass it into the audio context
+//   const track = audioContext.createMediaElementSource(audioElement);
+// }
+
+
+let playerName = document.querySelector("#name-input");
+let scoreContentEl = document.querySelector("#score-content");
+
+//when modalBtn clicked, save user name & score to local storage
+modalBtn.addEventListener("click", function () {
+  if (playerName) {
+    let playerInfo = {
+      name: playerName.value,
+      endScore: totalTail
+    };
+
+    userHigh.push(playerInfo);
+    window.localStorage.setItem('userHigh', JSON.stringify(userHigh));
   }
-  if (playerInfo.endScore > highScore) {
-    localStorage.setItem("highscore", playerInfo.endScore);
-    localStorage.setItem("name", playerInfo.name);
+  //empty scoreContentEl to avoid duplication of content
+  for (i = 0; i < userHigh.length; i++) {
+    if (scoreContentEl.firstChild) {
+      scoreContentEl.removeChild(scoreContentEl.firstChild)
+    }
+  }
+  displayContent();
+})
+
+//display local storage in high scores
+let displayContent = function () {
+  if (localStorage) {
+    let getContent = JSON.parse(window.localStorage.getItem('userHigh'));
+    for (let i = 0; i < getContent.length; i++) {
+      let contentDiv = document.createElement('div');
+      contentDiv.className = 'row';
+      contentDiv.className = 'flex-container';
+      let displayNameEl = document.createElement('li');
+      displayNameEl.className = 'score-elements';
+      let displayName = document.createTextNode(getContent[i].name);
+      displayNameEl.appendChild(displayName);
+
+      let displayScoreEl = document.createElement('li');
+      displayScoreEl.className = 'score-elements';
+      let displayScore = document.createTextNode(getContent[i].endScore);
+      displayScoreEl.appendChild(displayScore);
+
+      contentDiv.appendChild(displayNameEl);
+      contentDiv.appendChild(displayScoreEl);
+
+      scoreContentEl.appendChild(contentDiv);
+    }
+
   }
 
-} 
-*/
+}
+
+displayContent();

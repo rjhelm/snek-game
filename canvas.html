@@ -23,75 +23,76 @@
 
     <nav>
         <div class="nav-wrapper light-green accent-4">
-          <a href="#" class="brand-logo center">Snek</a>
+            <a href="#" class="brand-logo center">Snek</a>
         </div>
     </nav>
 
-<div class="row">
+    <div class="row">
 
-    <div class="row" id="main-section">
+        <div class="row" id="main-section">
 
 
-        <div class="col s12 center">
+            <div class="col s12 center">
 
-            <div class="row">
+                <!-- <div class="row">
                 <div class="col s12 center">
                 <h1 class="text-white">Play</h1>
                 </div>
-            </div>
-            
+            </div> -->
 
-            <div class="row center">
-                <div class="col s12 center">
-                    <a id="startBtn" class="waves-effect waves-light btn-large light-green accent-4">Start</a>
-                    <h2><span class="result"><img src="./assets/images/food.png" alt="food"></span>
-                        <span id="score">0</span>
-                    </h2>
+
+                <div class="row center">
+                    <div class="col s12 center">
+                        <a id="startBtn" class="waves-effect waves-light btn-large light-green accent-4">Start</a>
+                        <h2><span class="result"><img src="./assets/images/food.png" alt="food"></span>
+                            <span id="score">0</span>
+                        </h2>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col s12 center">
-                    <canvas id="snakeCanvas" width="500" height="500"></canvas>
-                    <img class="responsive-img" id="randomObstacle" src="./assets/images/random-obstacle.png"
-                        alt="randomObstacle">
-                    <img id="food" src="./assets/images/food.png" alt="food">
+                <audio id="audio"
+                    src="./assets/ytmp3free.cc_harel-atias-sun-fall-down-visualizer-youtubemp3free.org.mp3"></audio>
+
+                <div class="row">
+                    <div class="col s12 center">
+                        <canvas id="snakeCanvas" width="500" height="500"></canvas>
+                        <img class="responsive-img" id="randomObstacle" src="./assets/images/random-obstacle.png"
+                            alt="randomObstacle">
+                        <img id="food" src="./assets/images/food.png" alt="food">
+                    </div>
                 </div>
-            </div>
 
-        </div>
-
-        <aside class="col s12 center">
-
-            <div class="row">
-                <div class="col s12 center">
-                    <h1 id="hs-title" class="text-white">High Scores</h1>
-                </div>
             </div>
 
-            <div class="row">
-                <div id="player-title" class="col s12 center">
-                    <h2>Player</h2>
-                </div>
-                <div class="col s12 center">
-                    <h2>Score</h2>
-                </div>
-            </div>
+            <aside class="col s12 center">
 
-            <div class="row">
-                <div class="col s12 m6">
-                    <div id="score-card" class="card blue-grey darken-1">
-                        <div class="card-content white-text">
-                            <p>To Be Determined</p>
+                <div class="row">
+                    <div class="col s12 center">
+                        <h1 id="hs-title" class="text-white">High Scores</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="player-title" class="col s12 center">
+                        <h2>Player</h2>
+                    </div>
+                    <div class="col s12 center">
+                        <h2>Score</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div id="score-card" class="card blue-grey darken-1">
+                            <ul id="score-content" class="card-content white-text"></ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </aside>
+            </aside>
+
+        </div>
 
     </div>
-
-</div>
 
 
     <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -114,24 +115,28 @@
 
     <footer class="page-footer light-green accent-4">
 
-                <h4 class="white-text row">
+        <h4 class="white-text row">
 
-                    <div class="col s3">
-                    <ul><a href="https://github.com/rjhelm" target="_blank"><img src="assets/images/github.png"> rjhelm</a></ul>
-                    </div>
-                    <div class="col s3">
-                    <ul><a href="https://github.com/matty-bennett" target="_blank"><img src="assets/images/github.png"> matty-bennett</a></ul>
-                    </div>
-                    <div class="col s3">
-                    <ul><a href="https://github.com/savbennett8" target="_blank"><img src="assets/images/github.png"> savbennett8</a></ul>
-                    </div>
-                    <div class="col s3">
-                    <ul><a href="https://github.com/linegrind675" target="_blank"><img src="assets/images/github.png"> linegrind675</a></ul>
-                    </div>
+            <div class="col s3">
+                <ul><a href="https://github.com/rjhelm" target="_blank"><img src="assets/images/github.png"> rjhelm</a>
+                </ul>
+            </div>
+            <div class="col s3">
+                <ul><a href="https://github.com/matty-bennett" target="_blank"><img src="assets/images/github.png">
+                        matty-bennett</a></ul>
+            </div>
+            <div class="col s3">
+                <ul><a href="https://github.com/savbennett8" target="_blank"><img src="assets/images/github.png">
+                        savbennett8</a></ul>
+            </div>
+            <div class="col s3">
+                <ul><a href="https://github.com/linegrind675" target="_blank"><img src="assets/images/github.png">
+                        linegrind675</a></ul>
+            </div>
 
 
-                </h4>
-        
+        </h4>
+
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
