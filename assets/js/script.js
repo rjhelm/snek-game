@@ -449,7 +449,6 @@ modalGif();
 // }
 
 
-let playerName = document.querySelector("#name-input");
 let scoreContentEl = document.querySelector("#score-content");
 
 //when modalBtn clicked, save user name & score to local storage
@@ -476,6 +475,7 @@ modalBtn.addEventListener("click", function () {
 let displayContent = function () {
   if (localStorage) {
     let getContent = JSON.parse(window.localStorage.getItem('userHigh'));
+    //console gives error on first go because there is no information in local storage to start
     for (let i = 0; i < getContent.length; i++) {
       let contentDiv = document.createElement('div');
       contentDiv.className = 'row';
